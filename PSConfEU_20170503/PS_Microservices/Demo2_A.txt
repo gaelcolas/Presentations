@@ -1,0 +1,8 @@
+Get-Job | remove-job -force;cls
+$obj = [PSCustomObject]@{Prop1 = 'aaa';Prop2 = 123} 
+$obj | Send-RabbitMqMessage -Exchange '' -Key 'q'
+
+$obj | Add-member -MemberType ScriptMethod -Name do -Value {Write-Host 'Do'}
+$obj | Gm -name do
+
+$obj | Send-RabbitMqMessage -Exchange '' -Key 'q'

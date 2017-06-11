@@ -1,0 +1,3 @@
+pushd C:\src\PSCelery\PSCelery\tests\Integration\default\resources
+code C:\src\PSCelery
+C:\Chocolatey\lib\python3.3.5.1\tools\Scripts\celery.exe worker -A celery_worker

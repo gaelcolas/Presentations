@@ -1,0 +1,10 @@
+docker ps
+$PSversionTable
+ipmo C:\src\PSRabbitMq\PSRabbitMq\PSRabbitMQ.psd1 -force
+cls
+get-command -Module PSRabbitMQ
+# Send message
+Send-RabbitMqMessage -Exchange '' -Key 'q' -InputObject 'PSConfEU Rocks!'
+# Do something when a message is received
+Register-RabbitMqEvent -Exchange '' -QueueName 'q' -Action {Write-host "Message Received: $_"}
+do {    get-job | Receive-Job; start-sleep -seconds 1} while ($true)

@@ -1,0 +1,11 @@
+#Once the Celery worker is started, execute
+# essentially: task = celery.send_task('mul', (7, 7))
+python.exe C:\src\PSCelery\PSCelery\tests\Integration\default\resources\celery_client\test_pythonWorker_1.py
+pushd C:\src\PSCelery\PSCelery\examples\Demo1
+ipmo C:\src\PSRabbitMq\PSRabbitMq\PSRabbitMQ.psd1
+ipmo C:\src\PSCelery\PSCelery\PSCelery.psd1
+. .\App.ps1
+
+cls
+$sig = (New-CelerySignature -TaskName 'App.add' -CeleryApp $App)
+$r = $app.TaskRegistry.'App.Mul'.apply_async(@(2,5),@{})

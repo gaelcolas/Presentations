@@ -1,0 +1,9 @@
+
+$PSversionTable
+ipmo C:\src\PSRabbitMq\PSRabbitMq\PSRabbitMQ.psd1 -force
+cls
+Wait-RabbitMqMessage -Exchange '' -Key 'q' -QueueName 'q' -Timeout 800
+cls
+Send-RabbitMqMessage -Exchange '' -Key 'q' -InputObject 'PSConfEU Rocks!'
+Send-RabbitMqMessage -Exchange '' -Key 'q' -InputObject 'RabbitMQ is fun!'
+Send-RabbitMqMessage -Exchange '' -Key 'q' -InputObject 'PSConfEU Rocks!'

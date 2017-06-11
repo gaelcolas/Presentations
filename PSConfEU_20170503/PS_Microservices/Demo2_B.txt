@@ -1,0 +1,6 @@
+cls
+Wait-RabbitMqMessage -Exchange '' -Key 'q' -QueueName 'q' -Timeout 800
+
+$receivedObj = Wait-RabbitMqMessage -Exchange '' -Key 'q' -QueueName 'q' -Timeout 800
+$receivedObj | gm
+
