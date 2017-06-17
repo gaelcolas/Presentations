@@ -218,18 +218,22 @@ Given 'You can create your own object in PS' {
     $obj
 
     #or with a class
-Class Obj {
-    $a
-    $b
-    $c
-
-    Obj () {
-        $this.a = 1
-        $this.b = 2
-        $this.c = 3
+    Class Obj {
+        $a
+        $b
+        $c
+        Obj () {
+            $this.a = 1
+            $this.b = 2
+            $this.c = 3
+        }
     }
-}
 
-$objClass = [Obj]::New()
+    $objClass = [Obj]::New()
 
+    #Spot the difference
+    $objClass | gm
+    $obj | gm
+
+    #property vs NoteProperty
 }

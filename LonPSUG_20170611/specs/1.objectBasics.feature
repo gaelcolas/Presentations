@@ -23,10 +23,4 @@ Feature: Discover the basics of PowerShell objects
     Scenario: Look at Object members through the PS lens
         Given an instance of an object
         And its different members
-        AndThen You can create your own object in PS
-
-    @modifiers
-    Scenario: discuss the known modifiers
-        Given the Static modifier
-        And the Public and Hidden ones
-        And briefly explain Private Protected
+        And You can create your own object in PS
