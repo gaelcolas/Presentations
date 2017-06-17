@@ -1,0 +1,16 @@
+For detail about classes look here:
+https://xainey.github.io/2016/powershell-classes-and-concepts/
+
+If you wan't a small challenge using clas and script property:
+
+    Scenario: Challenge
+        Create a class Named FileProvider
+        With a hidden Property Named Path
+        so when we do $obj = [FileProvider]::new('C:\existing\path')
+        We can 'walk through' the file system via the $obj dot notation
+        IN a FS with C:\path C:\path\test.txt C:\path\test2\test2.txt
+        $obj = [FileProvider]::new('C:\')
+        $Obj.path.test #returns C:\path\test.txt
+        $obj.path.test2.test2 #returns C:\path\test2\test2.txt
+
+#the class could be around 20 lines
