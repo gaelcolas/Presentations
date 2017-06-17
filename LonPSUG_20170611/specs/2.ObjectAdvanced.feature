@@ -7,16 +7,11 @@ Feature: More about objects
 
     @ATS_ETS
     Scenario: Shows the ATS and ETS of PSObject
-        Given a process object with ETS
+        Given a object with ETS
+        And the ETS-added properties
+        And the Extended type data
+        And the formating of objects
+        And the module EZOut, we are covered
     
-    @serialization
-    Scenario: Show the effect of serialization
-
     @customObject
     Scenario: Create your custom function creating object
-
-    @Format
-    Scenario: Discover what format is and the default
-
-    @EZOut
-    Scenario: Create a custom formatz

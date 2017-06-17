@@ -177,7 +177,7 @@ Given 'an instance of an object' {
     
 }
 
-Given 'its different properties' {
+Given 'its different members' {
     $obj = Get-Process | Select -first 1
 
     #what are those?
